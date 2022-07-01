@@ -1,0 +1,363 @@
+body {
+  background: rgba(156, 156, 156, 0.055);
+  /* background: linear-gradient(
+    175deg,
+    rgba(23, 142, 197, 0.589),
+    rgb(4, 79, 114)
+  ); */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 2em;
+  box-sizing: border-box;
+  color: rgb(4, 57, 82);
+  animation: animation 16s ease infinite alternate;
+  font-size: 16px;
+  font-family: "Alliance No.1",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+html {
+  scroll-behavior: auto;
+}
+
+.background {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 8%;
+  z-index: -2;
+  height: 65%;
+}
+main {
+  max-width: 100%;
+  width: 700px;
+  box-sizing: border-box;
+}
+
+img:first-child {
+  padding: 10px;
+}
+
+#navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background: rgb(255, 255, 255);
+  position: sticky;
+  top: 0;
+  left: 0;
+  border-radius: 0px 0px 20px 20px;
+  z-index: 2;
+  /*
+  display: grid;
+  grid-template-columns: auto auto;
+  */
+}
+a{
+  text-decoration: none;
+  color:  rgb(4, 57, 82);;
+}
+
+#toggler {
+  display: none;
+}
+
+.contact_us {
+  background: linear-gradient(175deg, rgb(23, 142, 197), rgb(4, 79, 114));
+  color: white;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: none;
+  align-self: center;
+  justify-self: center;
+  position: fixed;
+  right: 5%;
+  top: 7%;
+  cursor: pointer;
+}
+
+.explore_us:hover {
+  transform: scale(1.2);
+}
+
+
+.list {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+
+  /* background: white;
+  display: grid;
+  padding: 10px;
+  width: 90%;
+  grid-template-columns: auto auto auto auto;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto; */
+}
+
+.new_list {
+  display: none;
+}
+
+.body_box {
+  background: rgba(255, 255, 255, 0.81);
+  border: 2px solid;
+  width: 80%;
+  margin: 0 auto;
+  backdrop-filter: blur(8px) saturate(180%);
+  border-radius: 12px;
+  
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#body_content {
+  width: 80%;
+  margin: 0 auto;
+  text-align: justify;
+  text-indent: 5%;
+}
+
+
+.our_vision, .our_mission, .our_courses {
+  margin-top: 2mm;
+  border: 1mm solid;
+  width: 90%;
+  margin: 5% auto;
+  padding: 0 5px;
+  text-align: justify;
+  box-shadow: 0px 0px 10px 1px rgba(23, 142, 197, 0.5);
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.our_vision:hover, .our_mission:hover, .our_courses:hover{
+  transform:scale(1.1);
+}
+
+
+
+footer {
+  background: rgba(247, 247, 247, 0.938);
+  border-radius: 20px 20px 0px 0px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+footer input {
+  width: 30%;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid rgb(4, 57, 82);
+  color: rgb(4, 57, 82);
+  font-size: 15px;
+  padding: 2px;
+  margin: 10px;
+  min-width: 200px;
+}
+
+footer input:focus {
+  transform: scale(1.1);
+  border: 1px solid rgb(4, 57, 82);
+  color: rgb(4, 57, 82);
+}
+
+footer input:valid {
+  border: 3px solid rgb(15, 206, 15);
+}
+
+footer button {
+  width: 150px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: rgba(41, 98, 124, 0.89);
+  color: white;
+  margin-bottom: 20px;
+}
+
+footer button:hover {
+  transform: scale(1.1);
+}
+
+footer h2 {
+  margin: 0;
+}
+.first_child {
+  border-bottom: 2px solid;
+  width: 95%;
+  margin: 0 auto;
+}
+.last_child {
+  width: 95%;
+  margin: 10px 0 auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.developer {
+  display: grid;
+  grid-template-rows: auto auto;
+  padding-bottom: 10px;
+  border-left: 1px solid;
+  padding-left: 50px;
+}
+.developer a{
+  text-decoration:underline;
+
+}
+footer h4 {
+  font-size: 30px;
+  align-self: center;
+  padding-left: 20px;
+}
+
+.iframe{
+  margin:0 auto;
+  padding-left:20%
+  
+}
+
+@keyframes animation {
+  0% {
+    background: linear-gradient(rgba(23, 142, 197, 0.5), rgb(4, 79, 114));
+    transition: 4s;
+  }
+  25% {
+    background: linear-gradient(
+      rgba(18, 116, 163, 0.625),
+      rgba(10, 91, 130, 0.875)
+    );
+    transition: 4s;
+  }
+  50% {
+    background: linear-gradient(
+      rgba(14, 103, 147, 0.75),
+      rgba(14, 103, 147, 0.75)
+    );
+    transition: 4s;
+  }
+  75% {
+    background: linear-gradient(
+      rgba(10, 91, 130, 0.875),
+      rgba(18, 116, 163, 0.625)
+    );
+    transition: 4s;
+  }
+  100% {
+    background: linear-gradient(rgb(4, 79, 114), rgba(23, 142, 197, 0.589));
+    transition: 4s;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .menu {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+
+    cursor: pointer;
+    border-radius: 20px;
+  }
+
+  .list {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .move_up{
+    width: 20px;
+    border-radius: 20px;
+    background:rgb(4, 57, 82); 
+    color: white;
+    position: absolute;
+    position: sticky;
+    left:95%;
+    bottom:-20%;
+  }
+
+  .list li {
+    display: block;
+    border-bottom: 0.3px solid;
+    line-height: 3em;
+    cursor: pointer;
+  }
+
+  .list li:hover {
+    background: rgba(60, 117, 139, 0.877);
+    color: white;
+    transform: scale(1.05);
+    transition: 400ms;
+  }
+
+  .fixed_banner label {
+    display: inline-flexbox;
+    align-items: center;
+    cursor: grab;
+  }
+
+  #toggler:checked ~ .menu {
+    max-height: 100%;
+  }
+  .developer {
+    transform: scale(0.8);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .list {
+    display: none;
+  }
+
+  .new_list {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    width: 50%;
+    /* min-width: 500px;
+    max-width: 800px; */
+    text-align: center;
+    border: 1mm;
+    height: 100%;
+    cursor: pointer;
+    align-items: center;
+    align-content: center;
+  }
+  .new_list div {
+    padding-right: 10%;
+    /* background:  rgba(153, 170, 179, 0.062); */
+    border-right: 3px groove;
+    height: 100%;
+
+  }
+
+  .new_list div:hover {
+    background: rgba(60, 117, 139, 0.877);
+    color: white;
+    transform: scale(1.15);
+    transition: 400ms;
+  }
+
+  .new_list div:last-child {
+    border: none;
+  }
+
+  .move_up{
+    display: none;
+  }
+}
