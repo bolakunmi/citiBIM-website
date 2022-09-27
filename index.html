@@ -9,32 +9,43 @@
   </head>
   <body>
     <nav id="navbar">
-      <img src="citibim-logo.png" />
-      <input type="checkbox" id="toggler" />
+      <div class="bigscreen_header">
+
+      
+      <a href="index.html">
+              <img src="citibim-logo.png"  alt="citibim logo" class="logo"/>
+
+      </a>
       <ul class="new_list">
-        <div><a href="course_registration.html">Course registration</a></div>
-        <div><a href="research.html"> Research</a></div>
-        <div>
+        <li><a href="course_registration.html">Course registration</a></li>
+        <li><a href="research.html"> Research</a></li>
+        <li>
           <a href="projects_and_consultaion.html"> Projects and Consultation</a>
-        </div>
-        <div><a href="About_us.html"> About us</a></div>
+        </li>
+        <li><a href="About_us.html"> About us</a></li>
       </ul>
-      <label for="toggler"> <div class="contact_us">Explore</div></label>
+      </div>
+
+            <input type="checkbox" id="toggler" />
+
+      <label for="toggler"> <div class="contact_us">more</div></label>
       <div class="menu">
         <ul class="list">
-          <li><a href="course_registration.html">Course registration</a></li>
-          <li><a href="research.html"> Research</a></li>
-          <li>
-            <a href="projects_and_consultaion.html">
-              Projects and Consultation</a
-            >
+          <a href="course_registration.html"><li>Course registration</li></a>
+          <a href="research.html"><li> Research</li></a>
+          <a href="projects_and_consultaion.html"><li>
+            
+              Projects and Consultation
           </li>
-          <li><a href="About_us.html"> About us</a></li>
+          </a>
+          <a href="About_us.html"><li> About us</li></a>
         </ul>
       </div>
     </nav>
+
+    
     <br />
-    <img src="general.jpg" class="background" />
+    <img src="general.jpg" class="background"  alt="background"/>
     <div class="body_box">
       <h2>CitiBIM</h2>
       <h4 style="text-align: center; font-style: italic">
@@ -112,9 +123,9 @@
         <input
           type="email"
           placeholder="your email address..."
-          required
+          required class="email_input"
         /><br />
-        <button>subscribe</button>
+        <button type="button" class="email_submit">subscribe</button>
       </div>
       <div class="last_child">
         <h4>CitiBIM</h4>
@@ -123,14 +134,11 @@
             <div style="font-weight: 800">About Developer: KEENEST</div>
             <div>
               <img
-                src="https://media-exp1.licdn.com/dms/image/C5603AQHSeqOXEPYiEw/profile-displayphoto-shrink_200_200/0/1571680287215?e=1654732800&v=beta&t=Atw-JIqeheafvrQP7HwfeM8pTUbG-iUEuK3z0WIa0Hw"
-                style="
-                  width: 10mm;
-                  border-radius: 10mm;
-                  border: 1mm;
-                  border-color: rgb(4, 57, 82);
-                  border-style: groove;
-                "
+              src="./me.jpg"
+              alt="me"
+
+                class="my_face"
+                
               />
             </div>
           </div>

@@ -13,13 +13,16 @@ body {
   color: rgb(4, 57, 82);
   animation: animation 16s ease infinite alternate;
   font-size: 16px;
-  font-family: "Alliance No.1",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-family: "Alliance No.1", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
 }
 html {
   scroll-behavior: auto;
 }
 
 .background {
+  filter: blur(0.5px);
   width: 100%;
   position: fixed;
   left: 0;
@@ -33,12 +36,7 @@ main {
   box-sizing: border-box;
 }
 
-img:first-child {
-  padding: 10px;
-}
-
 #navbar {
-  display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
@@ -47,40 +45,67 @@ img:first-child {
   position: sticky;
   top: 0;
   left: 0;
-  border-radius: 0px 0px 20px 20px;
+
   z-index: 2;
   /*
   display: grid;
   grid-template-columns: auto auto;
   */
 }
-a{
+
+.logo {
+  width: auto;
+  height: 50px;
+  padding: 0;
+}
+
+.bigscreen_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bigscreen_header ul {
+  padding: 0;
+  margin: 0;
+}
+
+a {
   text-decoration: none;
-  color:  rgb(4, 57, 82);;
+  color: rgb(4, 57, 82);
 }
 
 #toggler {
   display: none;
 }
 
+.my_face {
+  width: 10mm;
+  height: auto;
+  border-radius: 10mm;
+  border: 1mm;
+  border-color: rgb(4, 57, 82);
+  border-style: groove;
+}
 .contact_us {
   background: linear-gradient(175deg, rgb(23, 142, 197), rgb(4, 79, 114));
   color: white;
-  padding: 10px 20px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 5px 10px;
   border-radius: 7px;
   border: none;
   align-self: center;
   justify-self: center;
   position: fixed;
-  right: 5%;
-  top: 7%;
+  right: 30px;
+  top: 25px;
   cursor: pointer;
 }
 
 .explore_us:hover {
   transform: scale(1.2);
 }
-
 
 .list {
   list-style: none;
@@ -89,7 +114,6 @@ a{
   text-align: center;
   width: 90%;
   margin: 0 auto;
-
   /* background: white;
   display: grid;
   padding: 10px;
@@ -112,7 +136,6 @@ a{
   margin: 0 auto;
   backdrop-filter: blur(8px) saturate(180%);
   border-radius: 12px;
-  
 }
 
 h2 {
@@ -127,8 +150,9 @@ h2 {
   text-indent: 5%;
 }
 
-
-.our_vision, .our_mission, .our_courses {
+.our_vision,
+.our_mission,
+.our_courses {
   margin-top: 2mm;
   border: 1mm solid;
   width: 90%;
@@ -140,11 +164,13 @@ h2 {
   background: rgba(255, 255, 255, 0.7);
 }
 
-.our_vision:hover, .our_mission:hover, .our_courses:hover{
-  transform:scale(1.1);
+.our_vision:hover,
+.our_mission:hover,
+.our_courses:hover {
+  transform: scale(1.05);
+  transition: 400ms;
+  transition-timing-function: ease;
 }
-
-
 
 footer {
   background: rgba(247, 247, 247, 0.938);
@@ -167,22 +193,25 @@ footer input {
 }
 
 footer input:focus {
-  transform: scale(1.1);
+  box-shadow: 0px 0px 5px 0px rgb(4, 57, 82);
   border: 1px solid rgb(4, 57, 82);
   color: rgb(4, 57, 82);
+  outline: none;
 }
 
 footer input:valid {
-  border: 3px solid rgb(15, 206, 15);
+  outline: none;
+  background: rgba(190, 255, 190, 0.884);
 }
 
 footer button {
-  width: 150px;
-  height: 30px;
-  border-radius: 5px;
+  padding: 10px 30px;
+  border-radius: 8px;
   background-color: rgba(41, 98, 124, 0.89);
   color: white;
   margin-bottom: 20px;
+  border: none;
+  text-transform: uppercase;
 }
 
 footer button:hover {
@@ -213,9 +242,8 @@ footer h2 {
   border-left: 1px solid;
   padding-left: 50px;
 }
-.developer a{
-  text-decoration:underline;
-
+.developer a {
+  text-decoration: underline;
 }
 footer h4 {
   font-size: 30px;
@@ -223,10 +251,9 @@ footer h4 {
   padding-left: 20px;
 }
 
-.iframe{
-  margin:0 auto;
-  padding-left:20%
-  
+.iframe {
+  margin: 0 auto;
+  padding-left: 20%;
 }
 
 @keyframes animation {
@@ -261,14 +288,19 @@ footer h4 {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
+  .body_box {
+    margin: 0 30px;
+    width: unset;
+  }
   .menu {
     width: 100%;
     max-height: 0;
     overflow: hidden;
-
+    display: flex;
     cursor: pointer;
     border-radius: 20px;
+    margin: 0 auto;
   }
 
   .list {
@@ -280,15 +312,15 @@ footer h4 {
     cursor: pointer;
   }
 
-  .move_up{
+  .move_up {
     width: 20px;
     border-radius: 20px;
-    background:rgb(4, 57, 82); 
+    background: rgb(4, 57, 82);
     color: white;
     position: absolute;
     position: sticky;
-    left:95%;
-    bottom:-20%;
+    left: 95%;
+    bottom: -20%;
   }
 
   .list li {
@@ -299,7 +331,8 @@ footer h4 {
   }
 
   .list li:hover {
-    background: rgba(60, 117, 139, 0.877);
+    background: rgba(60, 117, 139, 0.677);
+    font-weight: 500;
     color: white;
     transform: scale(1.05);
     transition: 400ms;
@@ -314,7 +347,7 @@ footer h4 {
   #toggler:checked ~ .menu {
     max-height: 100%;
   }
-  
+
   .developer {
     transform: scale(0.8);
   }
@@ -327,53 +360,78 @@ footer h4 {
 
   .new_list {
     display: flex;
-
-
-    /* min-width: 500px;
-    max-width: 800px; */
     text-align: center;
     border: 1mm;
     height: 100%;
     cursor: pointer;
     align-items: center;
     align-content: center;
+    row-gap: 30px;
+    column-gap: 30px;
   }
+
   .new_list li {
-    padding: 10px;
+    /* padding: 10px; */
     /* background:  rgba(153, 170, 179, 0.062); */
-
+    /* border:1px solid rgba(60, 117, 139, 0.877) ;
+    border-left: none;
+    border-right: none; */
     height: 100%;
     list-style: none;
     width: max-content;
-
   }
 
-  .new_list div {
-    padding: 10px;
-    /* background:  rgba(153, 170, 179, 0.062); */
-
-    height: 100%;
-    list-style: none;
-    width: max-content;
-
-  }
-
-  .new_list div:hover {
-    background: rgba(60, 117, 139, 0.877);
+  .new_list li:last-child {
+    border: 2px solid rgba(60, 117, 139, 0.877);
+    padding: 3px 8px;
+    border-radius: 8px;
+    color: unset;
     color: white;
-    transform: scale(1.15);
+  }
+
+  .new_list li:last-child:hover {
+    color: white;
+    transform: scale(1.05);
     transition: 400ms;
+    transition-timing-function: ease;
+  }
+
+  .new_list li:hover:not(.new_list li:last-child) {
+    border: 2px solid rgba(60, 117, 139, 0.877);
+    padding: 2px 5px;
+    background: white;
+    /* background: rgba(60, 117, 139, 0.877); */
+    color: rgba(60, 117, 139, 0.877);
+    transform: scale(1.05);
+    transition: 400ms;
+    transition-timing-function: ease;
+    /* font-weight: 500; */
   }
 
   .new_list div:last-child {
     border: none;
   }
 
-  .move_up{
+  .move_up {
     display: none;
   }
 
-  .contact_us{
+  .contact_us {
     display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .body_box {
+    margin: 0 10px;
+  }
+
+  .our_courses {
+    width: 80%;
+    margin-top: 50px;
+  }
+
+  .our_courses:hover {
+    transform: scale(1);
   }
 }
